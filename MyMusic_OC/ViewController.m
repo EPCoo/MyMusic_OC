@@ -8,11 +8,13 @@
 
 #import "ViewController.h"
 #import "searchResultCell.h"
-
+#import "SongInfoVM.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 @property (weak, nonatomic) IBOutlet UIButton *searchBtn;
 @property (weak, nonatomic) IBOutlet UITableView *searchResultsTableView;
+@property (nonatomic, strong) NSArray<SongInfoVM *> *songsArray;
 @end
 
 @implementation ViewController
@@ -21,22 +23,38 @@
     [super viewDidLoad];
     [self prepareTableView];
 }
+
+- (IBAction)searchBtnclick:(id)sender {
+    NSLog(@"%@",self.searchTextField.text);
+    [SongInfoVM searchSongsWithKeyWord:self.searchTextField.text returnLimit:10 offset:0 searchType:SearchSingleSongType success:^(NSArray<SongInfoVM *> *array){
+        if (array.count > 0) {
+            self.songsArray = [array mutableCopy];
+            [self.searchResultsTableView reloadData];
+        }
+    } resulterror:^(NSError *error) {
+        NSLog(@"%@",error.domain);
+    }];
+    
+}
+
 - (void)prepareTableView{
     self.searchResultsTableView.delegate = self;
     self.searchResultsTableView.dataSource = self;
-    // 背景颜色
-    self.searchResultsTableView.backgroundColor = [UIColor whiteColor];
+    self.searchResultsTableView.backgroundColor = [UIColor clearColor];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.songsArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    searchResultCell * pastRecordsCell = [searchResultCell cellWithTableView:tableView];
-
-    pastRecordsCell.titleLb.text = @"歌曲名字";
-    return pastRecordsCell;
+    searchResultCell * cell = [searchResultCell cellWithTableView:tableView];
+    SongInfoVM *viewModel = self.songsArray[indexPath.row];
+    cell.titleLb.text = [NSString stringWithFormat:@"%@-%@",viewModel.model.name,[viewModel getArtistName]];
+    cell.backgroundColor = [UIColor brownColor];
+    [cell.albumImg sd_setImageWithURL:[viewModel getalbumImgURL] placeholderImage:[UIImage imageNamed:@"placeholderImage"] options:SDWebImageRetryFailed];
+    [cell.titleLb sizeToFit];
+    return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
     // 选中后立即取消选中效果

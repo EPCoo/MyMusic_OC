@@ -11,6 +11,7 @@
 @interface searchResultCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *titleLb;
 @property (weak, nonatomic) IBOutlet UIButton *downloadBtn;
+@property (weak, nonatomic) IBOutlet UIImageView *albumImg;
 
 + (instancetype)cellWithTableView:(UITableView *)tableView;
 @end

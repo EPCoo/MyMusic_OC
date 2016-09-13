@@ -14,6 +14,14 @@
 		2420AAE61D87970E00F2D9A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2420AAE51D87970E00F2D9A6 /* Assets.xcassets */; };
 		2420AAE91D87970E00F2D9A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2420AAE71D87970E00F2D9A6 /* LaunchScreen.storyboard */; };
 		2420AAF21D879DCC00F2D9A6 /* searchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2420AAF11D879DCC00F2D9A6 /* searchResultCell.m */; };
+		24DDB5561D87C70500EE5D19 /* MMNetWorkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DDB5551D87C70500EE5D19 /* MMNetWorkTools.m */; };
+		24DDB5591D87CC4100EE5D19 /* SongInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DDB5581D87CC4100EE5D19 /* SongInfo.m */; };
+		24DDB55F1D87CD2100EE5D19 /* ArtistInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DDB55E1D87CD2100EE5D19 /* ArtistInfo.m */; };
+		24DDB5621D87CD6400EE5D19 /* AlbumInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DDB5611D87CD6400EE5D19 /* AlbumInfo.m */; };
+		24DDB5651D87CF4900EE5D19 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DDB5641D87CF4900EE5D19 /* BaseModel.m */; };
+		24DDB5691D87D33B00EE5D19 /* SongInfoVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DDB5681D87D33B00EE5D19 /* SongInfoVM.m */; };
+		24DDB56C1D87D36800EE5D19 /* BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DDB56B1D87D36800EE5D19 /* BaseViewModel.m */; };
+		24DDB56F1D87FE3F00EE5D19 /* placeholderImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24DDB56E1D87FE3F00EE5D19 /* placeholderImage.jpg */; };
 		F4455B14D899FE2B7897AD1C /* libPods-MyMusic_OC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2AAE107EDB45AFA536CCA6 /* libPods-MyMusic_OC.a */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +39,21 @@
 		2420AAEA1D87970E00F2D9A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2420AAF01D879DCC00F2D9A6 /* searchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = searchResultCell.h; sourceTree = "<group>"; };
 		2420AAF11D879DCC00F2D9A6 /* searchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchResultCell.m; sourceTree = "<group>"; };
+		24DDB5541D87C70500EE5D19 /* MMNetWorkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMNetWorkTools.h; sourceTree = "<group>"; };
+		24DDB5551D87C70500EE5D19 /* MMNetWorkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMNetWorkTools.m; sourceTree = "<group>"; };
+		24DDB5571D87CC4100EE5D19 /* SongInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongInfo.h; sourceTree = "<group>"; };
+		24DDB5581D87CC4100EE5D19 /* SongInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongInfo.m; sourceTree = "<group>"; };
+		24DDB55D1D87CD2100EE5D19 /* ArtistInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistInfo.h; sourceTree = "<group>"; };
+		24DDB55E1D87CD2100EE5D19 /* ArtistInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistInfo.m; sourceTree = "<group>"; };
+		24DDB5601D87CD6400EE5D19 /* AlbumInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumInfo.h; sourceTree = "<group>"; };
+		24DDB5611D87CD6400EE5D19 /* AlbumInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumInfo.m; sourceTree = "<group>"; };
+		24DDB5631D87CF4900EE5D19 /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		24DDB5641D87CF4900EE5D19 /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		24DDB5671D87D33B00EE5D19 /* SongInfoVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongInfoVM.h; sourceTree = "<group>"; };
+		24DDB5681D87D33B00EE5D19 /* SongInfoVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongInfoVM.m; sourceTree = "<group>"; };
+		24DDB56A1D87D36800EE5D19 /* BaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewModel.h; sourceTree = "<group>"; };
+		24DDB56B1D87D36800EE5D19 /* BaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewModel.m; sourceTree = "<group>"; };
+		24DDB56E1D87FE3F00EE5D19 /* placeholderImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholderImage.jpg; sourceTree = "<group>"; };
 		A2E639990A6A9C0323C1B5FF /* Pods-MyMusic_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMusic_OC.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyMusic_OC/Pods-MyMusic_OC.release.xcconfig"; sourceTree = "<group>"; };
 		DE2AAE107EDB45AFA536CCA6 /* libPods-MyMusic_OC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyMusic_OC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -68,6 +91,10 @@
 		2420AAD81D87970E00F2D9A6 /* MyMusic_OC */ = {
 			isa = PBXGroup;
 			children = (
+				24DDB56D1D87FE2400EE5D19 /* resources */,
+				24DDB5661D87D2FF00EE5D19 /* ViewModel */,
+				24DDB55C1D87CC8800EE5D19 /* Tools */,
+				24DDB55B1D87CC7100EE5D19 /* Model */,
 				2420AADC1D87970E00F2D9A6 /* AppDelegate.h */,
 				2420AADD1D87970E00F2D9A6 /* AppDelegate.m */,
 				2420AADF1D87970E00F2D9A6 /* ViewController.h */,
@@ -89,6 +116,49 @@
 				2420AADA1D87970E00F2D9A6 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		24DDB55B1D87CC7100EE5D19 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				24DDB5631D87CF4900EE5D19 /* BaseModel.h */,
+				24DDB5641D87CF4900EE5D19 /* BaseModel.m */,
+				24DDB5571D87CC4100EE5D19 /* SongInfo.h */,
+				24DDB5581D87CC4100EE5D19 /* SongInfo.m */,
+				24DDB55D1D87CD2100EE5D19 /* ArtistInfo.h */,
+				24DDB55E1D87CD2100EE5D19 /* ArtistInfo.m */,
+				24DDB5601D87CD6400EE5D19 /* AlbumInfo.h */,
+				24DDB5611D87CD6400EE5D19 /* AlbumInfo.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		24DDB55C1D87CC8800EE5D19 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				24DDB5541D87C70500EE5D19 /* MMNetWorkTools.h */,
+				24DDB5551D87C70500EE5D19 /* MMNetWorkTools.m */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		24DDB5661D87D2FF00EE5D19 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				24DDB56A1D87D36800EE5D19 /* BaseViewModel.h */,
+				24DDB56B1D87D36800EE5D19 /* BaseViewModel.m */,
+				24DDB5671D87D33B00EE5D19 /* SongInfoVM.h */,
+				24DDB5681D87D33B00EE5D19 /* SongInfoVM.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		24DDB56D1D87FE2400EE5D19 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				24DDB56E1D87FE3F00EE5D19 /* placeholderImage.jpg */,
+			);
+			name = resources;
 			sourceTree = "<group>";
 		};
 		7AF26D593EFB5FE504420ED2 /* Pods */ = {
@@ -169,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2420AAE91D87970E00F2D9A6 /* LaunchScreen.storyboard in Resources */,
+				24DDB56F1D87FE3F00EE5D19 /* placeholderImage.jpg in Resources */,
 				2420AAE61D87970E00F2D9A6 /* Assets.xcassets in Resources */,
 				2420AAE41D87970E00F2D9A6 /* Main.storyboard in Resources */,
 			);
@@ -229,10 +300,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24DDB5651D87CF4900EE5D19 /* BaseModel.m in Sources */,
+				24DDB55F1D87CD2100EE5D19 /* ArtistInfo.m in Sources */,
+				24DDB56C1D87D36800EE5D19 /* BaseViewModel.m in Sources */,
 				2420AAE11D87970E00F2D9A6 /* ViewController.m in Sources */,
+				24DDB5561D87C70500EE5D19 /* MMNetWorkTools.m in Sources */,
+				24DDB5591D87CC4100EE5D19 /* SongInfo.m in Sources */,
 				2420AADE1D87970E00F2D9A6 /* AppDelegate.m in Sources */,
 				2420AAF21D879DCC00F2D9A6 /* searchResultCell.m in Sources */,
+				24DDB5691D87D33B00EE5D19 /* SongInfoVM.m in Sources */,
 				2420AADB1D87970E00F2D9A6 /* main.m in Sources */,
+				24DDB5621D87CD6400EE5D19 /* AlbumInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
