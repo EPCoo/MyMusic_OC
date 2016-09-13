@@ -13,9 +13,12 @@
 		2420AAE41D87970E00F2D9A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2420AAE21D87970E00F2D9A6 /* Main.storyboard */; };
 		2420AAE61D87970E00F2D9A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2420AAE51D87970E00F2D9A6 /* Assets.xcassets */; };
 		2420AAE91D87970E00F2D9A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2420AAE71D87970E00F2D9A6 /* LaunchScreen.storyboard */; };
+		2420AAF21D879DCC00F2D9A6 /* searchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2420AAF11D879DCC00F2D9A6 /* searchResultCell.m */; };
+		F4455B14D899FE2B7897AD1C /* libPods-MyMusic_OC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2AAE107EDB45AFA536CCA6 /* libPods-MyMusic_OC.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22FC359291BDE986B78D15EC /* Pods-MyMusic_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMusic_OC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyMusic_OC/Pods-MyMusic_OC.debug.xcconfig"; sourceTree = "<group>"; };
 		2420AAD61D87970E00F2D9A6 /* MyMusic_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMusic_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2420AADA1D87970E00F2D9A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2420AADC1D87970E00F2D9A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +29,10 @@
 		2420AAE51D87970E00F2D9A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2420AAE81D87970E00F2D9A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2420AAEA1D87970E00F2D9A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2420AAF01D879DCC00F2D9A6 /* searchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = searchResultCell.h; sourceTree = "<group>"; };
+		2420AAF11D879DCC00F2D9A6 /* searchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = searchResultCell.m; sourceTree = "<group>"; };
+		A2E639990A6A9C0323C1B5FF /* Pods-MyMusic_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMusic_OC.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyMusic_OC/Pods-MyMusic_OC.release.xcconfig"; sourceTree = "<group>"; };
+		DE2AAE107EDB45AFA536CCA6 /* libPods-MyMusic_OC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyMusic_OC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4455B14D899FE2B7897AD1C /* libPods-MyMusic_OC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +52,8 @@
 			children = (
 				2420AAD81D87970E00F2D9A6 /* MyMusic_OC */,
 				2420AAD71D87970E00F2D9A6 /* Products */,
+				7AF26D593EFB5FE504420ED2 /* Pods */,
+				832BBEFA11045FB0FBE65BE7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +72,8 @@
 				2420AADD1D87970E00F2D9A6 /* AppDelegate.m */,
 				2420AADF1D87970E00F2D9A6 /* ViewController.h */,
 				2420AAE01D87970E00F2D9A6 /* ViewController.m */,
+				2420AAF01D879DCC00F2D9A6 /* searchResultCell.h */,
+				2420AAF11D879DCC00F2D9A6 /* searchResultCell.m */,
 				2420AAE21D87970E00F2D9A6 /* Main.storyboard */,
 				2420AAE51D87970E00F2D9A6 /* Assets.xcassets */,
 				2420AAE71D87970E00F2D9A6 /* LaunchScreen.storyboard */,
@@ -79,6 +91,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7AF26D593EFB5FE504420ED2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				22FC359291BDE986B78D15EC /* Pods-MyMusic_OC.debug.xcconfig */,
+				A2E639990A6A9C0323C1B5FF /* Pods-MyMusic_OC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		832BBEFA11045FB0FBE65BE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE2AAE107EDB45AFA536CCA6 /* libPods-MyMusic_OC.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +115,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2420AAED1D87970E00F2D9A6 /* Build configuration list for PBXNativeTarget "MyMusic_OC" */;
 			buildPhases = (
+				38CD166E3F73313AD24164EA /* [CP] Check Pods Manifest.lock */,
 				2420AAD21D87970E00F2D9A6 /* Sources */,
 				2420AAD31D87970E00F2D9A6 /* Frameworks */,
 				2420AAD41D87970E00F2D9A6 /* Resources */,
+				E50EFBCA91D21583B39A55D2 /* [CP] Embed Pods Frameworks */,
+				83E7E6319A868FD17041BE67 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,6 +176,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		38CD166E3F73313AD24164EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		83E7E6319A868FD17041BE67 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyMusic_OC/Pods-MyMusic_OC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E50EFBCA91D21583B39A55D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyMusic_OC/Pods-MyMusic_OC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2420AAD21D87970E00F2D9A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -151,6 +231,7 @@
 			files = (
 				2420AAE11D87970E00F2D9A6 /* ViewController.m in Sources */,
 				2420AADE1D87970E00F2D9A6 /* AppDelegate.m in Sources */,
+				2420AAF21D879DCC00F2D9A6 /* searchResultCell.m in Sources */,
 				2420AADB1D87970E00F2D9A6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +342,7 @@
 		};
 		2420AAEE1D87970E00F2D9A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22FC359291BDE986B78D15EC /* Pods-MyMusic_OC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyMusic_OC/Info.plist;
@@ -272,6 +354,7 @@
 		};
 		2420AAEF1D87970E00F2D9A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2E639990A6A9C0323C1B5FF /* Pods-MyMusic_OC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyMusic_OC/Info.plist;
@@ -300,6 +383,7 @@
 				2420AAEF1D87970E00F2D9A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
