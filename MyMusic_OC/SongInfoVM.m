@@ -10,7 +10,14 @@
 #import "MMNetWorkTools.h"
 #import "SongInfo.h"
 #import "ArtistInfo.h"
+
+@interface SongInfo (){
+    NSString *_songMD5_ID;
+}
+
+@end
 @implementation SongInfoVM
+
 - (NSString *)getArtistName {
     ArtistInfo *artist = [self.model.artists firstObject];
     return artist.name;
@@ -18,6 +25,9 @@
 - (NSURL *)getalbumImgURL {
     ArtistInfo *artist = [self.model.artists firstObject];
     return [NSURL URLWithString:artist.img1v1Url];
+}
+- (NSString *)getSongMD5_ID {
+    return @"sdfsdf";
 }
 + (void)searchSongsWithKeyWord:(NSString *)keyword
                    returnLimit:(NSInteger)limit

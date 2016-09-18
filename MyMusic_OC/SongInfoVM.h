@@ -18,6 +18,7 @@ typedef NS_ENUM(NSUInteger, SearchSongsType) {
 
 @interface SongInfoVM : BaseViewModel
 @property (nonatomic, strong) SongInfo *model;
+@property (nonatomic, copy) NSString *songMD5_ID;
 - (NSString *)getArtistName;
 - (NSURL *)getalbumImgURL;
 /**
