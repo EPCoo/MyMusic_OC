@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MMNetWorkTools.h"
+
 @class BaseModel;
 @interface BaseViewModel : NSObject
 +(instancetype)vmWithModel:(BaseModel *)model;

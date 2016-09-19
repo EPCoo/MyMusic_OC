@@ -7,28 +7,19 @@
 //
 
 #import "SongInfoVM.h"
-#import "MMNetWorkTools.h"
-#import "SongInfo.h"
-#import "ArtistInfo.h"
-
-@interface SongInfo (){
-    NSString *_songMD5_ID;
-}
-
-@end
+#import "SearchInfo.h"
 @implementation SongInfoVM
 
 - (NSString *)getArtistName {
-    ArtistInfo *artist = [self.model.artists firstObject];
+    SearchArtistInfo *artist = [self.model.artists firstObject];
     return artist.name;
 }
 - (NSURL *)getalbumImgURL {
-    ArtistInfo *artist = [self.model.artists firstObject];
+    SearchArtistInfo *artist = [self.model.artists firstObject];
     return [NSURL URLWithString:artist.img1v1Url];
 }
-- (NSString *)getSongMD5_ID {
-    return @"sdfsdf";
-}
+
+
 + (void)searchSongsWithKeyWord:(NSString *)keyword
                    returnLimit:(NSInteger)limit
                         offset:(NSInteger)offset
@@ -44,26 +35,20 @@
                                @"offset":[NSString stringWithFormat:@"%zd",offset]
                                };
     
-    [[MMNetWorkTools sharedTools] POST:@"search/get"
-                            parameters:paramter
-                              progress:NULL
-                               success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *responseObject)
-     {
-         NSArray *array = responseObject[@"result"][@"songs"];
-         NSMutableArray *mArray = [NSMutableArray arrayWithCapacity:array.count];
-         for (NSDictionary *dict in array) {
-             SongInfo *model = [[SongInfo alloc] initWithDict:dict];
-             SongInfoVM *viewModel = [self vmWithModel:model];
-             [mArray addObject:viewModel];
-         }
-         success([mArray copy]);
-         
-     }
-                               failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error)
-     {
-         if (resulterror) {
-             resulterror(error);
-         }
-     }];
+    [[MMNetWorkTools sharedTools] POST:@"search/get" parameters:paramter progress:NULL success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *responseObject){
+        NSArray *array = responseObject[@"result"][@"songs"];
+        NSMutableArray *mArray = [NSMutableArray arrayWithCapacity:array.count];
+        for (NSDictionary *dict in array) {
+            SearchInfo *model = [[SearchInfo alloc] initWithDict:dict];
+            SongInfoVM *viewModel = [self vmWithModel:model];
+            [mArray addObject:viewModel];
+        }
+        success([mArray copy]);
+        
+    }failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
+        if (resulterror) {
+            resulterror(error);
+        }
+    }];
 }
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewModel.h"
-#import "SongInfo.h"
+#import "SearchInfo.h"
 typedef NS_ENUM(NSUInteger, SearchSongsType) {
     SearchSingleSongType = 1,   //!<单曲
     SearchAlbumType = 10,       //!<专辑
@@ -17,8 +17,7 @@ typedef NS_ENUM(NSUInteger, SearchSongsType) {
 };
 
 @interface SongInfoVM : BaseViewModel
-@property (nonatomic, strong) SongInfo *model;
-@property (nonatomic, copy) NSString *songMD5_ID;
+@property (nonatomic, strong) SearchInfo *model;
 - (NSString *)getArtistName;
 - (NSURL *)getalbumImgURL;
 /**

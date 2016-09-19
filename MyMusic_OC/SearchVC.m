@@ -9,7 +9,6 @@
 #import "SearchVC.h"
 #import "searchResultCell.h"
 #import "SongInfoVM.h"
-#import <SDWebImage/UIImageView+WebCache.h>
 #import <SVProgressHUD.h>
 
 @interface SearchVC ()<UITableViewDelegate,UITableViewDataSource>
@@ -38,7 +37,7 @@
         [SVProgressHUD dismiss];
     } resulterror:^(NSError *error) {
         NSLog(@"%@",error.domain);
-        [SVProgressHUD dismiss];
+        [SVProgressHUD showErrorWithStatus:@"搜索失败！"];
     }];
     
 }
@@ -56,11 +55,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     searchResultCell * cell = [searchResultCell cellWithTableView:tableView];
-    SongInfoVM *viewModel = self.songsArray[indexPath.row];
-    cell.titleLb.text = [NSString stringWithFormat:@"%@-%@",viewModel.model.name,[viewModel getArtistName]];
-    cell.backgroundColor = [UIColor brownColor];
-    [cell.albumImg sd_setImageWithURL:[viewModel getalbumImgURL] placeholderImage:[UIImage imageNamed:@"placeholderImage"] options:SDWebImageRetryFailed];
-    [cell.titleLb sizeToFit];
+    cell.viewModel = self.songsArray[indexPath.row];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{

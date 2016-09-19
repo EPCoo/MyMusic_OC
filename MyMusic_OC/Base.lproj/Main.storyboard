@@ -106,6 +106,9 @@
                                                         <constraint firstAttribute="width" constant="40" id="FH0-ly-Ljd"/>
                                                     </constraints>
                                                     <state key="normal" title="下载"/>
+                                                    <connections>
+                                                        <action selector="downloadClick:" destination="zq0-Oy-qRl" eventType="touchUpInside" id="JNw-cd-jYG"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
