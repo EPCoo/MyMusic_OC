@@ -24,12 +24,13 @@
     for (int i = 0; i < byte2_len; i++) {
         byte2[i] = byte2[i] ^ byte1[i % byte1_len];
     }
+    
     // md5加密
     unsigned char digest[CC_MD5_DIGEST_LENGTH];
     CC_MD5(byte2, byte2_len, digest);
+    
     // base64输出
-    const char *listdigest = (const char*)(char*)digest;
-    NSData *plainData = [NSData dataWithBytes:digest length:strlen(listdigest)];
+    NSData *plainData = [NSData dataWithBytes:digest length:byte2_len];
     NSString *base64String = [plainData base64EncodedStringWithOptions:0];
     
     NSString *songMD5Str = [base64String stringByReplacingOccurrencesOfString:@"/" withString:@"_"];
